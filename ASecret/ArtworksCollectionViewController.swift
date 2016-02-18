@@ -73,6 +73,7 @@ class ArtworksCollectionViewController: UICollectionViewController, PlaceholderV
             let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
             alertController.addAction(cancel)
             alertController.addAction(delete)
+            alertController.popoverPresentationController?.barButtonItem = sender
             self.presentViewController(alertController, animated: true, completion: nil)
         }
         operation.userInitiated = true
